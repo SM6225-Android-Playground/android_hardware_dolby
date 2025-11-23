@@ -17,14 +17,14 @@ import android.widget.Toast
 import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.Preference.OnPreferenceChangeListener
-import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreferenceCompat
 import co.aospa.dolby.DolbyConstants.Companion.dlog
 import co.aospa.dolby.R
 import com.android.settingslib.widget.MainSwitchPreference
+import com.android.settingslib.widget.SettingsBasePreferenceFragment
 
-class DolbySettingsFragment : PreferenceFragmentCompat(),
-    OnPreferenceChangeListener, CompoundButton.OnCheckedChangeListener {
+class DolbySettingsFragment : SettingsBasePreferenceFragment(),
+    OnPreferenceChangeListener,CompoundButton.OnCheckedChangeListener {
 
     private val switchBar by lazy {
         findPreference<MainSwitchPreference>(DolbyConstants.PREF_ENABLE)!!
